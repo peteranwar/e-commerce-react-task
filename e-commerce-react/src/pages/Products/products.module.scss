@@ -1,0 +1,23 @@
+@import"../../styles/config";
+.my_masonry_grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -20px; /* gutter size offset */
+    width: auto;
+  }
+  .my_masonry_grid_column {
+    padding-left: 20px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my_masonry_grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: 20px;
+    box-shadow: 0 0 9px lightgray;
+    text-align: center;
+    @include transformScale;
+    &:hover{
+      box-shadow: 1px 1px 2px lightgray;
+    }
+  }

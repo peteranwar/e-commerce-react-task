@@ -1,0 +1,32 @@
+@import"./styles/config";
+
+
+.custom-header{
+  position: relative;
+  z-index: 3;
+  margin: 2rem  auto;
+    max-width: max-content;
+  @include easeInOut;
+
+  &::after {
+      position: absolute;
+      content: '';
+       bottom: 0; right: -10%; left: -10%;
+      transform-origin: 0 100%;
+      background-color: $primary-color;
+      mix-blend-mode: difference;
+      z-index: -1;
+      height: 15px;
+      width: 120%;
+      @include easeInOut;
+  }
+  
+  &:hover{
+    color: $primary-color;
+    &:after{
+        transform: none;
+        background-color: black;
+        height: 35px;
+    }
+  }
+}
